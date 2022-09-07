@@ -1,1 +1,76 @@
+/* to all */
 
+:root {
+  --main-color: #2e2e2e;
+  --font-color: rgb(217, 217, 217);
+  --accent-color: rgba(160, 0, 0, 0.76);
+}
+
+body {
+  background-color: var(--main-color);
+  color: var(--font-color);
+  max-width: 1350px;
+  margin: 30px auto 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+  color: var(--font-color);
+  display: inline-block;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* header */
+
+.name {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.pages {
+  margin-bottom: 5px;
+}
+
+.pages a {
+  font-size: 20px;
+}
+
+.active {
+  color: var(--accent-color);
+}
+
+/* main  work page */
+
+.main {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.illustration-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.illustration-card {
+  padding: 0px;
+  max-width: 600px;
+}
+
+/* footer */
+
+.socials {
+  margin-bottom: 20px;
+}
+
+.socials a {
+  font-size: 23px;
+}
