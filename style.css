@@ -5,6 +5,12 @@
   --font-color: rgb(217, 217, 217);
   --accent-color: rgba(160, 0, 0, 0.76);
   --accent-color-too: rgb(207, 207, 64);
+  --accent-font-family: "Dosis", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
@@ -33,7 +39,7 @@ a:hover {
 .name {
   display: inline-block;
   margin-bottom: 5px;
-  font-family: "Dosis", sans-serif;
+  font-family: var(--accent-font-family);
   font-size: 500;
 }
 
@@ -82,7 +88,7 @@ a:hover {
 .card-name {
   font-size: 25px;
   font-weight: 700;
-  font-family: "Dosis", sans-serif;
+  font-family: var(--accent-font-family);
   color: var(--accent-color-too);
 }
 
@@ -165,5 +171,37 @@ a:hover {
 
   .socials {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1220px) {
+  .illustration-cards {
+    justify-content: left;
+  }
+}
+
+/* contact and about pages */
+
+.contact a,
+.about strong {
+  font-family: var(--accent-font-family);
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.contain {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contain .main {
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .contain .main {
+    flex-grow: 0;
+    margin-bottom: 30px;
   }
 }
