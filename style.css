@@ -4,20 +4,21 @@
   --main-color: #2e2e2e;
   --font-color: rgb(217, 217, 217);
   --accent-color: rgba(160, 0, 0, 0.76);
+  --accent-color-too: rgb(207, 207, 64);
 }
 
 body {
   background-color: var(--main-color);
   color: var(--font-color);
   max-width: 1350px;
-  margin: 30px auto 10px;
+  margin: 35px auto 10px;
   padding: 10px;
   text-align: center;
 }
 
 a {
   text-decoration: none;
-  transition: all 200ms ease-in-out;
+  transition: all 300ms ease-in-out;
   color: var(--font-color);
   display: inline-block;
 }
@@ -32,6 +33,8 @@ a:hover {
 .name {
   display: inline-block;
   margin-bottom: 5px;
+  font-family: "Dosis", sans-serif;
+  font-size: 500;
 }
 
 .pages {
@@ -63,6 +66,44 @@ a:hover {
 .illustration-card {
   padding: 0px;
   max-width: 600px;
+  position: relative;
+}
+
+.name-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+}
+
+.card-name {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Dosis", sans-serif;
+  color: var(--accent-color-too);
+}
+
+.illustration-card img {
+  transition: all 400ms ease-in-out;
+}
+
+.illustr-card {
+  display: block;
+}
+
+.illustration-card .card-name {
+  transition: all 600ms ease-in-out;
+}
+
+.illustration-card:hover img {
+  opacity: 0.5;
+}
+
+.illustration-card:hover .card-name {
+  opacity: 1;
 }
 
 /* footer */
@@ -73,4 +114,56 @@ a:hover {
 
 .socials a {
   font-size: 23px;
+}
+
+/* illustration card page */
+
+.illustr-card-header {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px;
+}
+
+.illustr-card-header a {
+  display: inline-block;
+}
+
+.name-and-arrows {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.illustr-name {
+  font-size: 30px;
+}
+
+.full-img {
+  max-height: 600px;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+  body {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  .main {
+    padding-bottom: 0;
+  }
+
+  .socials {
+    margin-bottom: 0;
+  }
 }
